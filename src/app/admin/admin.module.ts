@@ -6,7 +6,7 @@ import { SharedModule } from 'shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { AuthguardService } from 'shared/services/authguard.service';
 import { AdminAuthGuardService } from './services/admin-auth-guard.service';
-import { OrderDetailComponent } from 'app/shopping/components/order-detail/order-detail.component';
+import { OrderDetailComponent } from 'shared/components/order-detail/order-detail.component';
 
 @NgModule({
   declarations: [

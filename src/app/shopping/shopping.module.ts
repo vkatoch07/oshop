@@ -10,7 +10,7 @@ import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.
 import { RouterModule } from '@angular/router';
 import { AuthguardService } from 'shared/services/authguard.service';
 import { SharedModule } from 'shared/shared.module';
-import { OrderDetailComponent } from './components/order-detail/order-detail.component';
+import { OrderDetailComponent } from 'shared/components/order-detail/order-detail.component';
 
 
 
