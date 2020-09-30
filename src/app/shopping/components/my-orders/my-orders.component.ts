@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { switchMap } from 'rxjs/internal/operators/switchMap';
 import { AuthService } from 'shared/services/auth.service';
 import { OrderService } from 'shared/services/order.service';
@@ -9,10 +9,12 @@ import { OrderService } from 'shared/services/order.service';
   templateUrl: './my-orders.component.html',
   styleUrls: ['./my-orders.component.css']
 })
-export class MyOrdersComponent {
+export class MyOrdersComponent implements OnInit {
   orders$;
 
-  constructor(private authService: AuthService, private orderService: OrderService) {
-    this.orders$ = this.authService.user$.switchMap(u => this.orderService.getOrdersByUser(u.uid));
+  constructor(private authService: AuthService, private orderService: OrderService) {}
+
+  async ngOnInit(){
+    this.orders$ = await this.authService.user$.switchMap(u => this.orderService.getOrdersByUser(u.uid));
   }
 }

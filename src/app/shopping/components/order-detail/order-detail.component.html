@@ -1,0 +1,25 @@
+<div class="card" *ngIf="order">
+    <div class="card-header">
+        <h5 class="card-title">Order Details</h5>
+        <p class="card-text">Order # {{ id }}</p>
+    </div>
+    <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li *ngFor="let item of order.items" class="list-group-item">
+                {{item.quantity}} * {{item.product.title}}
+                <div class="float-right">
+                    {{item.totalPrice | currency:'INR'}}
+                </div>
+            </li>
+            <li class="list-group-item font-weight-bold">
+                Order Total
+                <div class="float-right">
+                    {{ order.orderTotal | currency: 'INR'}}
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="card-footer">
+        <button type="button" (click)=navigateBack() class="btn btn-secondary float-right">Back</button>
+    </div>
+</div>
