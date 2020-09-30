@@ -23,8 +23,7 @@ import { OrderDetailComponent } from 'shared/components/order-detail/order-detai
     MyOrdersComponent,
     ProductFilterComponent,
     ShoppingCartSummaryComponent,
-    ShippingFormComponent,
-    OrderDetailComponent
+    ShippingFormComponent
   ],
   imports: [
     SharedModule,

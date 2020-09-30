@@ -15,13 +15,15 @@ import { CustomFormsModule } from 'ng2-validation';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { OrderDetailComponent } from './components/order-detail/order-detail.component';
 
 
 
 @NgModule({
   declarations: [
     ProductCardComponent,
-    ProductQuantityComponent
+    ProductQuantityComponent,
+    OrderDetailComponent
   ],
   imports: [
     CommonModule,
@@ -35,6 +37,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   exports:[
     ProductCardComponent,
     ProductQuantityComponent,
+    OrderDetailComponent,
     CommonModule,
     FormsModule,
     DataTablesModule,
